@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="GreenWCF.GreenService" CodeBehind="GreenService.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="GreenWCF.GreenService" Factory="GreenWCF.DependencyResolution.StructureMapServiceHostFactory" CodeBehind="GreenService.svc.cs" %>

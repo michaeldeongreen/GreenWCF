@@ -1,0 +1,1 @@
+https://lostechies.com/jimmybogard/2008/07/30/integrating-structuremap-with-wcf/

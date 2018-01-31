@@ -9,9 +9,14 @@ namespace GreenWCF.Services
 {
     public class SomeService : ISomeService
     {
+        private readonly IThatService _thatService;
+        public SomeService(IThatService thatService)
+        {
+            _thatService = thatService;
+        }
         public string Print()
         {
-            return "Printing....";
+            return $"In SomeService and {_thatService.Print()}";
         }
     }
 }

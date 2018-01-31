@@ -13,6 +13,7 @@ namespace GreenWCF.ConsoleApp
         {
             GreenServiceProxy.GreenServiceClient client = new GreenServiceProxy.GreenServiceClient();
             string value = client.Get(39);
+            Console.WriteLine(value);
             Console.ReadLine();
         }
     }

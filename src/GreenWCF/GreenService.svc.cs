@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GreenWCF.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,13 +13,14 @@ namespace GreenWCF
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class GreenService : IGreenService
     {
-        public GreenService()
+        private readonly ISomeService _someService;
+        public GreenService(ISomeService someService)
         {
-
+            _someService = someService;
         }
         public string Get(int value)
         {
-            return string.Format("You entered: {0}", value);
+            return $"You entered: {value} and {_someService.Print()}";
         }
     }
 }
