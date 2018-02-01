@@ -42,8 +42,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="StructureMap, Version=2.6.4.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
-      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
+    <Reference Include="StructureMap, Version=4.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.6.1\lib\net45\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceModel.Activation" />
     <Reference Include="System.Web.DynamicData" />
@@ -69,10 +69,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyResolution\DefaultRegistry.cs" />
+    <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
     <Compile Include="DependencyResolution\StructureMapInstanceProvider.cs" />
     <Compile Include="DependencyResolution\StructureMapServiceBehavior.cs" />
     <Compile Include="DependencyResolution\StructureMapServiceHost.cs" />
     <Compile Include="DependencyResolution\StructureMapServiceHostFactory.cs" />
+    <Compile Include="DependencyResolution\StructureMapWcf.cs" />
     <Compile Include="GreenService.svc.cs">
       <DependentUpon>GreenService.svc</DependentUpon>
     </Compile>

@@ -1,1 +1,20 @@
 https://lostechies.com/jimmybogard/2008/07/30/integrating-structuremap-with-wcf/
+
+These for classes handles the wiring up of WCF/StructureMap:
+	StructureMapServiceHostFactory
+	StructureMapServiceHost
+	StructureMapServiceBehavior
+	StructureMapInstanceProvider
+
+Misc Classes:	
+	IoC.cs - Creates the IoC Container
+	StructureMapWcf.cs - Static class that has a StructureMapDependencyScope
+	StructureMapDependencyScope.cs - In its constructor, accepts a IContainer
+	
+Workflow:
+	StructureMapServiceHostFactory.cs
+		IoC.cs
+		StructureMapWcf.StructureMapDependencyScope.cs
+		StructureMapServiceHost.cs
+			StructureMapServiceBehavior.cs
+				StructureMapInstanceProvider.cs

@@ -13,15 +13,8 @@ namespace GreenWCF.DependencyResolution
     {
         public StructureMapServiceHostFactory()
         {
-            ObjectFactory.Initialize(x =>
-            {
-                x.AddRegistry<ServicesRegistry>();
-                x.Scan(scan =>
-                {
-                    scan.TheCallingAssembly();
-                    scan.WithDefaultConventions();
-                });
-            });
+            IContainer container = IoC.Initialize();
+            StructureMapWcf.StructureMapDependencyScope = new StructureMapDependencyScope(container);
         }
 
         protected override ServiceHost CreateServiceHost(Type serviceType, Uri[] baseAddresses)
