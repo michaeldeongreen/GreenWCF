@@ -1,5 +1,8 @@
 https://lostechies.com/jimmybogard/2008/07/30/integrating-structuremap-with-wcf/
 
+Nested Containers in WCF
+https://gist.github.com/Cybermaxs/17d620d44a810c5bccce232178745048
+
 These for classes handles the wiring up of WCF/StructureMap:
 	StructureMapServiceHostFactory
 	StructureMapServiceHost
@@ -18,3 +21,6 @@ Workflow:
 		StructureMapServiceHost.cs
 			StructureMapServiceBehavior.cs
 				StructureMapInstanceProvider.cs
+				
+StructureMapInspector:
+	Used to simulate Begin/End Request so we can create a nested container per request and dispose of it after each request.

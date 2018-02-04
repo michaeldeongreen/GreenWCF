@@ -23,6 +23,7 @@ namespace GreenWCF.DependencyResolution
                     {
                         ed.DispatchRuntime.InstanceProvider =
                             new StructureMapInstanceProvider(serviceDescription.ServiceType);
+                        ed.DispatchRuntime.MessageInspectors.Add(new StructureMapInspector());
                     }
                 }
             }

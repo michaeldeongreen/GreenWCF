@@ -1,4 +1,6 @@
-﻿using GreenWCF.Services.Interfaces;
+﻿using GreenWCF.DependencyResolution;
+using GreenWCF.Services.Interfaces;
+using StructureMap;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,7 @@ namespace GreenWCF
     public class GreenService : IGreenService
     {
         private readonly ISomeService _someService;
-        public GreenService(ISomeService someService)
+        public GreenService(ISomeService someService, IContainer container)
         {
             _someService = someService;
         }

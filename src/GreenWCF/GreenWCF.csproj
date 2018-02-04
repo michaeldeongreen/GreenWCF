@@ -72,6 +72,7 @@
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
+    <Compile Include="DependencyResolution\StructureMapInspector.cs" />
     <Compile Include="DependencyResolution\StructureMapInstanceProvider.cs" />
     <Compile Include="DependencyResolution\StructureMapServiceBehavior.cs" />
     <Compile Include="DependencyResolution\StructureMapServiceHost.cs" />

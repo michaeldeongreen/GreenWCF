@@ -25,7 +25,7 @@ namespace GreenWCF.DependencyResolution
 
         public object GetInstance(InstanceContext instanceContext, Message message)
         {
-            return StructureMapWcf.StructureMapDependencyScope.Container.GetInstance(_serviceType);
+            return StructureMapWcf.StructureMapDependencyScope.CurrentNestedContainer.GetInstance(_serviceType);
         }
 
         public void ReleaseInstance(InstanceContext instanceContext, object instance)
