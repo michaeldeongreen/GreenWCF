@@ -17,13 +17,7 @@ namespace GreenWCF.DependencyResolution
             get
             {
                 try
-                {
-                    _currentNestedContainer= (IContainer)OperationContext.Current.IncomingMessageProperties[NestedContainerKey];
-                }
-                catch (Exception)
-                {
-                    _currentNestedContainer = null;
-                }
+                { _currentNestedContainer= (IContainer)OperationContext.Current.IncomingMessageProperties[NestedContainerKey]; } catch (Exception) { _currentNestedContainer = null; }
                 return _currentNestedContainer;
             }
             set

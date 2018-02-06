@@ -22,7 +22,7 @@ namespace GreenWCF
         }
         public string Get(int value)
         {
-            return $"You entered: {value} and {_someService.Print()}";
+            return $"You entered: {value} and {_someService.Print()} and your container is: {StructureMapWcf.StructureMapDependencyScope.CurrentNestedContainer.GetHashCode().ToString()}";
         }
     }
 }
