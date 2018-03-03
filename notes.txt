@@ -3,7 +3,7 @@ https://lostechies.com/jimmybogard/2008/07/30/integrating-structuremap-with-wcf/
 Nested Containers in WCF
 https://gist.github.com/Cybermaxs/17d620d44a810c5bccce232178745048
 
-These for classes handles the wiring up of WCF/StructureMap:
+These four classes handles the wiring up of WCF/StructureMap:
 	StructureMapServiceHostFactory
 	StructureMapServiceHost
 	StructureMapServiceBehavior
